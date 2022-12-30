@@ -1,12 +1,7 @@
-import './App.css'
+import './App.scss';
 
-function App() {
-
-  return (
-    <>
-      Hello
-    </>
-  )
+function App(): JSX.Element {
+	return <div>Hello</div>;
 }
 
-export default App
+export default App;
