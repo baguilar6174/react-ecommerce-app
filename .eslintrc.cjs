@@ -6,23 +6,24 @@ module.exports = {
 		jest: true
 	},
 	extends: [
-		// By extending from a plugin config, we can get recommended rules without having to add them manually.
 		'eslint:recommended',
 		'plugin:react/recommended',
 		'plugin:import/recommended',
-		'plugin:jsx-a11y/recommended',
+		'plugin:jsx-a11y/recommended', // accessibility rules on JSX elements
 		'plugin:@typescript-eslint/recommended',
 		'plugin:prettier/recommended',
-		// This disables the formatting rules in ESLint that Prettier is going to be responsible for handling.
-		// Make sure it's always the last config, so it gets the chance to override other configs.
 		'eslint-config-prettier',
-		'prettier'
+		'prettier',
+		'plugin:react-hooks/recommended'
 	],
 	settings: {
 		react: {
 			// Tells eslint-plugin-react to automatically detect the version of React to use.
 			version: 'detect'
 		},
+		// 'import/parsers': {
+		// 	'@typescript-eslint/parser': ['.ts', '.tsx']
+		// },
 		// Tells eslint how to resolve imports
 		'import/resolver': {
 			typescript: {},
@@ -41,7 +42,7 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module'
 	},
-	plugins: ['react', 'react-hooks', 'prettier', '@typescript-eslint'],
+	plugins: ['react', 'react-hooks', 'prettier', '@typescript-eslint', 'jsx-a11y'],
 	rules: {
 		'react/react-in-jsx-scope': 'off',
 		camelcase: 'error',
@@ -50,6 +51,9 @@ module.exports = {
 		'no-duplicate-imports': 'error',
 		'no-unused-vars': 'off',
 		'@typescript-eslint/no-unused-vars': 'error',
-		'@typescript-eslint/explicit-function-return-type': 'error'
+		'@typescript-eslint/explicit-function-return-type': 'error',
+		'import/no-unresolved': 'error',
+		'react-hooks/rules-of-hooks': 'error',
+		'react-hooks/exhaustive-deps': 'error'
 	}
 };

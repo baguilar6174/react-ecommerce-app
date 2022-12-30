@@ -1,6 +1,6 @@
 # React Ecommerce App
 
-# Dev features
+## Dev features
 
 - Eslint
 - Prettier
@@ -8,7 +8,7 @@
 - Alias paths
 - use .nvmrc and .npmrc files
 
-# TODO
+## TODO
 
 - Environment variables
 - Atomic design
