@@ -1,6 +1,12 @@
 # React Ecommerce App
 
-# Dev features
+## Build with
+
+- Vite
+- React JS 18
+- Bootstrap 5
+
+## Dev features
 
 - Eslint
 - Prettier
@@ -10,7 +16,7 @@
 - Husky (precommit and prepush)
 - Commit standard with commitlint
 
-# TODO
+## TODO
 
 - Environment variables
 - Atomic design
@@ -18,3 +24,4 @@
 - Redux
 - Routing using lazy loading
 - Use axios (implement interceptor)
+- Internationalization
