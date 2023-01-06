@@ -8,6 +8,7 @@
 
 ## Dev features
 
+- Project structure
 - Eslint
 - Prettier
 - SCSS
@@ -18,6 +19,7 @@
 
 ## TODO
 
+- Verify eslint rules for imports with alias in .eslintrc.cjs
 - Environment variables
 - Atomic design
 - Testing (Jest)

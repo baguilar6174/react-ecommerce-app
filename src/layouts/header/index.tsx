@@ -68,7 +68,7 @@ export const Header: React.FC = (): JSX.Element => {
 							<i className="icon-bars"></i>
 						</button>
 
-						<a href="index.html" className="logo">
+						<a href="/" className="logo">
 							<img src="/images/demos/demo-2/logo.png" alt="Molla Logo" width="105" height="25" />
 						</a>
 					</div>

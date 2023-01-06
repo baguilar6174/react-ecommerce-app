@@ -17,6 +17,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({ children }: SkeletonProps): 
 			<button id="scroll-top" title="Back to Top">
 				<i className="icon-arrow-up"></i>
 			</button>
+			{/* TODO: add mobile menu */}
 		</>
 	);
 };

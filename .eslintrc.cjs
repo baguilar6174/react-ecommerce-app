@@ -21,6 +21,9 @@ module.exports = {
 		},
 		'import/parsers': {
 			'@typescript-eslint/parser': ['.ts', '.tsx']
+		},
+		'import/resolver': {
+			typescript: {}
 		}
 	},
 	overrides: [],
@@ -35,6 +38,10 @@ module.exports = {
 	plugins: ['react', 'react-hooks', 'prettier', '@typescript-eslint', 'import'],
 	rules: {
 		'import/no-unresolved': 'error',
+		'import/namespace': 'off',
+		'import/default': 'off',
+		'import/no-named-as-default': 'off',
+		'import/no-named-as-default-member': 'off',
 		'react/react-in-jsx-scope': 'off',
 		camelcase: 'error',
 		'spaced-comment': 'error',
