@@ -1,4 +1,6 @@
-export const Header = (): JSX.Element => {
+import './_styles.scss';
+
+export const Header: React.FC = (): JSX.Element => {
 	return (
 		<header className="header header-2 header-intro-clearance">
 			<div className="header-top">
