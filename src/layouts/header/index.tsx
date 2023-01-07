@@ -5,6 +5,9 @@ import { NavLink } from 'react-router-dom';
 import './_styles.scss';
 import './_header-2.scss';
 
+// utils
+import { openMobileMenuFromBody, openMobileMenuSidebar } from '../utils';
+
 export const Header: React.FC = (): JSX.Element => {
 	return (
 		<header className="header header-2 header-intro-clearance">
@@ -68,7 +71,7 @@ export const Header: React.FC = (): JSX.Element => {
 			<div className="header-middle">
 				<div className="container">
 					<div className="header-left">
-						<button className="mobile-menu-toggler">
+						<button onClick={openMobileMenu} className="mobile-menu-toggler">
 							<span className="visually-hidden">Toggle mobile menu</span>
 							<i className="icon-bars"></i>
 						</button>
@@ -882,4 +885,9 @@ export const Header: React.FC = (): JSX.Element => {
 			</div>
 		</header>
 	);
+
+	function openMobileMenu(): void {
+		openMobileMenuFromBody();
+		openMobileMenuSidebar();
+	}
 };

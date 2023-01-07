@@ -5,10 +5,9 @@ import { Outlet } from 'react-router-dom';
 import './_styles.scss';
 
 // components
-import { Footer, Header, ScrollTop } from '../';
+import { Footer, Header, ScrollTop, MobileMenu } from '../';
 
 export const Skeleton: React.FC = (): JSX.Element => {
-	// TODO: add mobile menu
 	return (
 		<>
 			<div className="page-wrapper">
@@ -19,6 +18,7 @@ export const Skeleton: React.FC = (): JSX.Element => {
 				<Footer />
 			</div>
 			<ScrollTop />
+			<MobileMenu />
 		</>
 	);
 };

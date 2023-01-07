@@ -1,16 +1,20 @@
-// TODO: validate styles mobile menu from header styles
+/* eslint-disable jsx-a11y/anchor-is-valid */
+// styles
 import './_styles.scss';
+
+// utils
+import { closeMobileMenuSidebar, openMobileMenuFromBody } from '../utils';
 
 export const MobileMenu: React.FC = (): JSX.Element => {
 	return (
 		<>
-			<div className="mobile-menu-overlay"></div>
+			<div id="mobile-menu-overlay" className="mobile-menu-overlay"></div>
 
-			<div className="mobile-menu-container mobile-menu-light">
+			<div id="mobile-menu" className="mobile-menu-container mobile-menu-light">
 				<div className="mobile-menu-wrapper">
-					<span className="mobile-menu-close">
+					<button onClick={closeMobileMenu} className="mobile-menu-close">
 						<i className="icon-close"></i>
-					</span>
+					</button>
 
 					<form action="#" method="get" className="mobile-search">
 						<label htmlFor="mobile-search" className="visually-hidden">
@@ -29,13 +33,13 @@ export const MobileMenu: React.FC = (): JSX.Element => {
 						</button>
 					</form>
 
-					<ul className="nav nav-pills-mobile nav-border-anim" role="tablist">
+					<ul className="nav nav-pills-mobile nav-border-anim" id="myTab" role="tablist">
 						<li className="nav-item">
 							<a
 								className="nav-link active"
 								id="mobile-menu-link"
-								data-toggle="tab"
-								href="#mobile-menu-tab"
+								data-bs-toggle="tab"
+								data-bs-target="#mobile-menu-tab"
 								role="tab"
 								aria-controls="mobile-menu-tab"
 								aria-selected="true"
@@ -47,8 +51,8 @@ export const MobileMenu: React.FC = (): JSX.Element => {
 							<a
 								className="nav-link"
 								id="mobile-cats-link"
-								data-toggle="tab"
-								href="#mobile-cats-tab"
+								data-bs-toggle="tab"
+								data-bs-target="#mobile-cats-tab"
 								role="tab"
 								aria-controls="mobile-cats-tab"
 								aria-selected="false"
@@ -68,9 +72,17 @@ export const MobileMenu: React.FC = (): JSX.Element => {
 							<nav className="mobile-nav">
 								<ul className="mobile-menu">
 									<li className="active">
-										<a href="index.html">Home</a>
-
-										<ul>
+										<a
+											data-bs-toggle="collapse"
+											href="#collapseHome"
+											role="button"
+											aria-expanded="false"
+											aria-controls="collapseHome"
+										>
+											Home
+											<span className="mmenu-btn"></span>
+										</a>
+										<ul className="collapse" id="collapseHome">
 											<li>
 												<a href="index-1.html">01 - furniture store</a>
 											</li>
@@ -146,8 +158,17 @@ export const MobileMenu: React.FC = (): JSX.Element => {
 										</ul>
 									</li>
 									<li>
-										<a href="category.html">Shop</a>
-										<ul>
+										<a
+											data-bs-toggle="collapse"
+											href="#collapseShop"
+											role="button"
+											aria-expanded="false"
+											aria-controls="collapseShop"
+										>
+											Shop
+											<span className="mmenu-btn"></span>
+										</a>
+										<ul className="collapse" id="collapseShop">
 											<li>
 												<a href="category-list.html">Shop List</a>
 											</li>
@@ -195,10 +216,18 @@ export const MobileMenu: React.FC = (): JSX.Element => {
 										</ul>
 									</li>
 									<li>
-										<a href="product.html" className="sf-with-ul">
+										<a
+											data-bs-toggle="collapse"
+											href="#collapseProduct"
+											role="button"
+											aria-expanded="false"
+											aria-controls="collapseProduct"
+											className="sf-with-ul"
+										>
 											Product
+											<span className="mmenu-btn"></span>
 										</a>
-										<ul>
+										<ul className="collapse" id="collapseProduct">
 											<li>
 												<a href="product.html">Default</a>
 											</li>
@@ -230,8 +259,17 @@ export const MobileMenu: React.FC = (): JSX.Element => {
 										</ul>
 									</li>
 									<li>
-										<a href="/">Pages</a>
-										<ul>
+										<a
+											data-bs-toggle="collapse"
+											href="#collapsePages"
+											role="button"
+											aria-expanded="false"
+											aria-controls="collapsePages"
+										>
+											Pages
+											<span className="mmenu-btn"></span>
+										</a>
+										<ul className="collapse" id="collapsePages">
 											<li>
 												<a href="about.html">About</a>
 
@@ -271,9 +309,17 @@ export const MobileMenu: React.FC = (): JSX.Element => {
 										</ul>
 									</li>
 									<li>
-										<a href="blog.html">Blog</a>
-
-										<ul>
+										<a
+											data-bs-toggle="collapse"
+											href="#collapseBlog"
+											role="button"
+											aria-expanded="false"
+											aria-controls="collapseBlog"
+										>
+											Blog
+											<span className="mmenu-btn"></span>
+										</a>
+										<ul className="collapse" id="collapseBlog">
 											<li>
 												<a href="blog.html">Classic</a>
 											</li>
@@ -281,8 +327,17 @@ export const MobileMenu: React.FC = (): JSX.Element => {
 												<a href="blog-listing.html">Listing</a>
 											</li>
 											<li>
-												<a href="/">Grid</a>
-												<ul>
+												<a
+													data-bs-toggle="collapse"
+													href="#collapseBlogGrid"
+													role="button"
+													aria-expanded="false"
+													aria-controls="collapseBlogGrid"
+												>
+													Grid
+													<span className="mmenu-btn"></span>
+												</a>
+												<ul className="collapse" id="collapseBlogGrid">
 													<li>
 														<a href="blog-grid-2cols.html">Grid 2 columns</a>
 													</li>
@@ -298,8 +353,17 @@ export const MobileMenu: React.FC = (): JSX.Element => {
 												</ul>
 											</li>
 											<li>
-												<a href="/">Masonry</a>
-												<ul>
+												<a
+													data-bs-toggle="collapse"
+													href="#collapseBlogMasonry"
+													role="button"
+													aria-expanded="false"
+													aria-controls="collapseBlogMasonry"
+												>
+													Masonry
+													<span className="mmenu-btn"></span>
+												</a>
+												<ul className="collapse" id="collapseBlogMasonry">
 													<li>
 														<a href="blog-masonry-2cols.html">Masonry 2 columns</a>
 													</li>
@@ -315,8 +379,17 @@ export const MobileMenu: React.FC = (): JSX.Element => {
 												</ul>
 											</li>
 											<li>
-												<a href="/">Mask</a>
-												<ul>
+												<a
+													data-bs-toggle="collapse"
+													href="#collapseBlogMask"
+													role="button"
+													aria-expanded="false"
+													aria-controls="collapseBlogMask"
+												>
+													Mask
+													<span className="mmenu-btn"></span>
+												</a>
+												<ul className="collapse" id="collapseBlogMask">
 													<li>
 														<a href="blog-mask-grid.html">Blog mask grid</a>
 													</li>
@@ -326,8 +399,17 @@ export const MobileMenu: React.FC = (): JSX.Element => {
 												</ul>
 											</li>
 											<li>
-												<a href="/">Single Post</a>
-												<ul>
+												<a
+													data-bs-toggle="collapse"
+													href="#collapseBlogSingle"
+													role="button"
+													aria-expanded="false"
+													aria-controls="collapseBlogSingle"
+												>
+													Single Post
+													<span className="mmenu-btn"></span>
+												</a>
+												<ul className="collapse" id="collapseBlogSingle">
 													<li>
 														<a href="single.html">Default with sidebar</a>
 													</li>
@@ -342,8 +424,17 @@ export const MobileMenu: React.FC = (): JSX.Element => {
 										</ul>
 									</li>
 									<li>
-										<a href="elements-list.html">Elements</a>
-										<ul>
+										<a
+											data-bs-toggle="collapse"
+											href="#collapseElements"
+											role="button"
+											aria-expanded="false"
+											aria-controls="collapseElements"
+										>
+											Elements
+											<span className="mmenu-btn"></span>
+										</a>
+										<ul className="collapse" id="collapseElements">
 											<li>
 												<a href="elements-products.html">Products</a>
 											</li>
@@ -454,4 +545,9 @@ export const MobileMenu: React.FC = (): JSX.Element => {
 			</div>
 		</>
 	);
+
+	function closeMobileMenu(): void {
+		openMobileMenuFromBody();
+		closeMobileMenuSidebar();
+	}
 };
