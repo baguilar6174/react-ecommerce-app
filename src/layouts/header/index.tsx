@@ -1,3 +1,7 @@
+// react libs
+import { NavLink } from 'react-router-dom';
+
+// styles
 import './_styles.scss';
 import './_header-2.scss';
 
@@ -69,9 +73,9 @@ export const Header: React.FC = (): JSX.Element => {
 							<i className="icon-bars"></i>
 						</button>
 
-						<a href="/" className="logo">
+						<NavLink to="/" className="logo">
 							<img src="/images/demos/demo-2/logo.png" alt="Molla Logo" width="105" height="25" />
-						</a>
+						</NavLink>
 					</div>
 
 					<div className="header-center">
@@ -816,10 +820,9 @@ export const Header: React.FC = (): JSX.Element => {
 									</ul>
 								</li>
 								<li>
-									<a href="elements-list.html" className="sf-with-ul">
+									<NavLink to="/elements" className="sf-with-ul">
 										Elements
-									</a>
-
+									</NavLink>
 									<ul>
 										<li>
 											<a href="elements-products.html">Products</a>

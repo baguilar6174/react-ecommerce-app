@@ -1,20 +1,24 @@
-import { Footer, Header, ScrollTop } from '../';
+// react libs
+import { Outlet } from 'react-router-dom';
+
+// styles
 import './_styles.scss';
 
-interface SkeletonProps {
-	children: React.ReactNode;
-}
+// components
+import { Footer, Header, ScrollTop } from '../';
 
-export const Skeleton: React.FC<SkeletonProps> = ({ children }: SkeletonProps): JSX.Element => {
+export const Skeleton: React.FC = (): JSX.Element => {
+	// TODO: add mobile menu
 	return (
 		<>
 			<div className="page-wrapper">
 				<Header />
-				<main className="main">{children}</main>
+				<main className="main">
+					<Outlet />
+				</main>
 				<Footer />
 			</div>
 			<ScrollTop />
-			{/* TODO: add mobile menu */}
 		</>
 	);
 };
