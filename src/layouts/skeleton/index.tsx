@@ -1,4 +1,4 @@
-import { Footer, Header } from '../';
+import { Footer, Header, ScrollTop } from '../';
 import './_styles.scss';
 
 interface SkeletonProps {
@@ -13,10 +13,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({ children }: SkeletonProps): 
 				<main className="main">{children}</main>
 				<Footer />
 			</div>
-			{/* TODO: add sroll-top functionallity*/}
-			<button id="scroll-top" title="Back to Top">
-				<i className="icon-arrow-up"></i>
-			</button>
+			<ScrollTop />
 			{/* TODO: add mobile menu */}
 		</>
 	);

@@ -1,4 +1,5 @@
 import './_styles.scss';
+import './_header-2.scss';
 
 export const Header: React.FC = (): JSX.Element => {
 	return (

@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import App from './App';
 
+import '@/assets/scss/global.scss';
 import './index.scss';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
