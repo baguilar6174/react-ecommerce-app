@@ -1,3 +1,14 @@
+a {
+	font-family: 'Poppins';
+}
+p {
+	margin-bottom: 0;
+	font-size: 1.4rem;
+	font-weight: 300;
+	font-family: 'Poppins';
+	letter-spacing: 0;
+	color: #777;
+}
 .title {
 	font-size: 2.2rem;
 	letter-spacing: -0.03em;
@@ -5847,10 +5858,6 @@ button:focus {
 	}
 }
 @media screen and (max-width: 575px) {
-	.breadcrumb-nav .d-flex {
-		flex-direction: column;
-		align-items: flex-start !important;
-	}
 	.product-pager {
 		margin-right: auto;
 		margin-top: 1rem;
@@ -8336,35 +8343,6 @@ button:focus {
 }
 .card-dashboard .card-body {
 	padding: 4rem 2.8rem 2rem;
-}
-.error-content {
-	color: #777;
-	font-weight: 400;
-	font-size: 1.8rem;
-	line-height: 1.5;
-	letter-spacing: -0.025em;
-	padding-top: 8.5rem;
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	min-height: 480px;
-	background-color: #fdfdfd;
-}
-.error-content p {
-	margin-bottom: 2.5rem;
-}
-.error-title {
-	letter-spacing: -0.025em;
-	margin-bottom: 1.4rem;
-}
-@media screen and (min-width: 768px) {
-	.error-content {
-		padding-top: 12.5rem;
-		min-height: 540px;
-	}
-	.error-content {
-		min-height: 620px;
-	}
 }
 .soon {
 	position: relative;

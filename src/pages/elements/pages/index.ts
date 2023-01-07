@@ -1,1 +1,0 @@
-export { ButtonsPage } from './buttons';

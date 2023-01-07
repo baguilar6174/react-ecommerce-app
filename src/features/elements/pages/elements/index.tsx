@@ -1,16 +1,12 @@
 // react libs
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // styles
 import './_styles.scss';
 
-// components
-import { PageHeader } from '@/components/shared/pageHeader';
-
 export const ElemenstsPage: React.FC = (): JSX.Element => {
 	return (
 		<>
-			<PageHeader title="Elements list" subtitle="Elements" />
 			<div className="page-content">
 				<div className="container">
 					<div className="row elements">
@@ -143,8 +139,6 @@ export const ElemenstsPage: React.FC = (): JSX.Element => {
 					</div>
 				</div>
 			</div>
-
-			<Outlet />
 		</>
 	);
 };

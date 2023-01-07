@@ -5,14 +5,13 @@ import { Routes, Route } from 'react-router-dom';
 import { Skeleton } from '@/layouts/skeleton/index';
 
 // pages
-import { HomePage, ElemenstsPage, Page400 } from '@/pages';
+import { HomePage, Page400 } from '@/features';
 
 export const AppRouter: React.FC = (): JSX.Element => {
 	return (
 		<Routes>
 			<Route path="/" element={<Skeleton />}>
 				<Route path="/" element={<HomePage />} />
-				<Route path="/elements" element={<ElemenstsPage />} />
 			</Route>
 			<Route path="/400" element={<Page400 />} />
 		</Routes>
