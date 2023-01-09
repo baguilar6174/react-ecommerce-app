@@ -2,7 +2,7 @@
 import './_styles.scss';
 
 // components
-import { Button } from '@/components/shared';
+import { Button } from '@/components/shared/base';
 import { borderRoundedType, borderStyleType, iconPositionType } from '@/components/shared/base/button';
 
 export const ButtonsPage: React.FC = (): JSX.Element => {
