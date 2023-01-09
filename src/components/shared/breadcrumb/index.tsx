@@ -4,7 +4,17 @@ import { Link, useLocation } from 'react-router-dom';
 // styles
 import './_styles.scss';
 
-export const Breadcrumb: React.FC = (): JSX.Element => {
+export type PropBreadcrumb = {
+	isHomeIncluded?: boolean;
+};
+
+export const DEFAULT_PROPS: PropBreadcrumb = {
+	isHomeIncluded: true
+};
+
+export const Breadcrumb: React.FC<PropBreadcrumb> = (props: PropBreadcrumb): JSX.Element => {
+	const { isHomeIncluded } = props;
+
 	const location = useLocation();
 
 	let currentLink = '';
@@ -26,12 +36,16 @@ export const Breadcrumb: React.FC = (): JSX.Element => {
 		<nav aria-label="breadcrumb" className="breadcrumb-nav">
 			<div className="container">
 				<ol className="breadcrumb">
-					<li className="breadcrumb-item">
-						<Link to="/">Home</Link>
-					</li>
+					{isHomeIncluded && (
+						<li className="breadcrumb-item">
+							<Link to="/">Home</Link>
+						</li>
+					)}
 					{crumbs}
 				</ol>
 			</div>
 		</nav>
 	);
 };
+
+Breadcrumb.defaultProps = DEFAULT_PROPS;
