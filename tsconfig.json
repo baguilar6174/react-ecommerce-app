@@ -23,7 +23,7 @@
 			"@/utils/*": ["./src/utils/*"],
 			"@/common/*": ["./src/common/*"],
 			"@/assets/*": ["./src/assets/*"],
-			"@/pages/*": ["./src/pages/*"],
+			"@/features/*": ["./src/features/*"],
 			"@/routes/*": ["./src/routes/*"],
 			"@/hooks/*": ["./src/hooks/*"],
 			"@/store/*": ["./src/store/*"]

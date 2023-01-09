@@ -1,0 +1,93 @@
+.header-3 {
+	color: #fff;
+	background-color: #333333;
+}
+.header-3 .header-top {
+	background-color: #333;
+}
+.header-3 .header-top .container::after,
+.header-3 .header-top .container-fluid::after {
+	height: 0.1rem;
+	background-color: #444444;
+}
+.header-3 .header-top .header-left i {
+	font-size: 1.6rem;
+	margin-right: 0.5rem;
+}
+.header-3 .header-dropdown {
+	padding-top: 0.65rem;
+	padding-bottom: 0.65rem;
+}
+.header-3 .header-middle {
+	border-bottom: none;
+}
+.header-3 .header-bottom {
+	background-color: #fff;
+}
+.header-3 .header-bottom .menu > li > a::before {
+	bottom: 0;
+	top: unset;
+}
+.header-3 .wishlist a {
+	color: #fff;
+}
+.header-3 .cart-dropdown:not(:hover):not(.show) .dropdown-toggle,
+.header-3 .compare-dropdown:not(:hover):not(.show) .dropdown-toggle,
+.header-3 .mobile-menu-toggler,
+.header-3 .search-toggle:not(:hover):not(:focus),
+.header-3 .wishlist-link:not(:hover):not(:focus) {
+	color: #fff;
+}
+.header-3 .wishlist .wishlist-count,
+.header-3 .cart-count {
+	color: #333;
+}
+.header-3 .header-bottom {
+	border-bottom: 0.1rem solid #ebebeb;
+}
+.header-3 .header-bottom .header-right p {
+	padding-right: 0;
+}
+.header-3 .logo {
+	margin-bottom: 3.5rem;
+	margin-top: 3rem;
+}
+.header-3 .header-search-extended .btn {
+	max-width: 40px;
+	margin-left: 1rem;
+	height: 46px;
+	font-size: 2.2rem;
+	background-color: transparent;
+	color: #333;
+}
+.header-3 .header-search-extended .form-control {
+	border-top-right-radius: 3rem;
+	border-bottom-right-radius: 3rem;
+	padding-left: 0;
+	height: 44px;
+	padding: 1rem 2.4rem 1rem 0.5rem;
+}
+.header-3 .btn-primary:hover,
+.header-3 .btn-primary:focus,
+.header-3 .btn-primary.focus,
+.header-3 .btn-primary:not(:disabled):not(.disabled):active,
+.header-3 .btn-primary:not(:disabled):not(.disabled).active,
+.header-3 .show > .btn-primary.dropdown-toggle {
+	color: #c96;
+	background-color: transparent;
+}
+@media screen and (max-width: 991px) {
+	.header-3 .header-search-visible .header-search-wrapper {
+		border-color: #dadada;
+	}
+	.header-3 .header-search-visible .header-search-wrapper:before {
+		border-bottom-color: #dadada;
+	}
+}
+@media screen and (max-width: 575px) {
+	.header-3 .cart-dropdown,
+	.header-3 .compare-dropdown,
+	.header-3 .wishlist {
+		padding-left: 1.4rem;
+	}
+}

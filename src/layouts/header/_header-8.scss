@@ -1,0 +1,103 @@
+.header-8 .header-top {
+	font-weight: 400;
+	font-size: 1.4rem;
+	color: #f4e8dd;
+	background-color: #c96;
+	margin-bottom: 0;
+}
+.header-8 .header-top .container:after,
+.header-8 .header-top .container-fluid:after {
+	display: none;
+}
+.header-8 .header-top .header-dropdown > a:hover,
+.header-8 .header-top .header-dropdown > a:focus,
+.header-8 .header-top .top-menu > li > a:hover,
+.header-8 .header-top .top-menu > li > a:focus {
+	color: #fff;
+}
+.header-8 .header-menu {
+	margin-top: 0;
+}
+.header-8 .header-menu ul a:not(:focus):not(:hover) {
+	color: #666;
+}
+.header-8 .header-dropdown {
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+}
+.header-8 .header-dropdown + .header-dropdown {
+	margin-left: 2rem;
+}
+.header-8 .top-menu,
+.header-8 .header-dropdown > a,
+.header-8 .header-dropdown > span {
+	text-transform: capitalize;
+}
+.header-8 .header-dropdown > a,
+.header-8 .header-dropdown > span {
+	padding-right: 2rem;
+}
+.header-8 .header-dropdown > a::after,
+.header-8 .header-dropdown > span::after {
+	font-size: 1rem;
+	margin-top: -0.5rem;
+}
+.header-8 .top-menu li + li {
+	margin-left: 2.1rem;
+}
+.header-8 .header-middle {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+.header-8 .main-nav {
+	margin-left: 0;
+	margin-right: 3rem;
+}
+.header-8 .menu > li > a {
+	padding-top: 3.45rem;
+	padding-bottom: 3.45rem;
+}
+.header-8 .header-search .form-control {
+	background-color: #f4f4f4;
+}
+.header-8 .header-search .form-control::placeholder {
+	font-style: italic;
+}
+.header-8 .header-search .header-search-wrapper {
+	border-color: #f4f4f4;
+}
+.header-8 .cart-dropdown .dropdown-menu,
+.header-8 .compare-dropdown .dropdown-menu,
+.header-8 .menu ul,
+.header-8 .menu .megamenu {
+	margin-top: 0;
+}
+@media screen and (min-width: 992px) {
+	.header-8 .header-top .top-menu a:hover,
+	.header-8 .header-top .top-menu a:focus {
+		color: #fff;
+	}
+}
+@media screen and (max-width: 991px) {
+	.header-8 .top-menu ul a:not(:hover):not(:focus) {
+		color: #666;
+	}
+	.header-8 .top-menu:not(.top-link-menu) ul {
+		margin-top: 0;
+	}
+	.header-8 .top-menu:not(.top-link-menu) > li {
+		padding-right: 2rem;
+	}
+	.header-8 .top-menu:not(.top-link-menu) > li::after {
+		font-size: 1rem;
+		margin-top: -0.5rem;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.header-8 .header-search .header-search-wrapper {
+		display: flex;
+	}
+	.header-8 .main-nav {
+		margin-right: 26rem;
+	}
+}

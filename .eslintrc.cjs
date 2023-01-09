@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 module.exports = {
 	env: {
 		browser: true,
@@ -9,7 +8,8 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:react/recommended',
 		'plugin:import/recommended',
-		'plugin:jsx-a11y/recommended', // accessibility rules on JSX elements
+		'plugin:import/typescript',
+		'plugin:jsx-a11y/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:prettier/recommended',
 		'eslint-config-prettier',
@@ -18,19 +18,13 @@ module.exports = {
 	],
 	settings: {
 		react: {
-			// Tells eslint-plugin-react to automatically detect the version of React to use.
 			version: 'detect'
 		},
-		// 'import/parsers': {
-		// 	'@typescript-eslint/parser': ['.ts', '.tsx']
-		// },
-		// Tells eslint how to resolve imports
+		'import/parsers': {
+			'@typescript-eslint/parser': ['.ts', '.tsx']
+		},
 		'import/resolver': {
-			typescript: {},
-			node: {
-				paths: ['src'],
-				extensions: ['.js', '.jsx', '.ts', '.tsx']
-			}
+			typescript: {}
 		}
 	},
 	overrides: [],
@@ -42,8 +36,13 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module'
 	},
-	plugins: ['react', 'react-hooks', 'prettier', '@typescript-eslint', 'jsx-a11y'],
+	plugins: ['react', 'react-hooks', 'prettier', '@typescript-eslint', 'import'],
 	rules: {
+		'import/no-unresolved': 'error',
+		'import/namespace': 'off',
+		'import/default': 'off',
+		'import/no-named-as-default': 'off',
+		'import/no-named-as-default-member': 'off',
 		'react/react-in-jsx-scope': 'off',
 		camelcase: 'error',
 		'spaced-comment': 'error',
@@ -52,7 +51,6 @@ module.exports = {
 		'no-unused-vars': 'off',
 		'@typescript-eslint/no-unused-vars': 'error',
 		'@typescript-eslint/explicit-function-return-type': 'error',
-		'import/no-unresolved': 'error',
 		'react-hooks/rules-of-hooks': 'error',
 		'react-hooks/exhaustive-deps': 'error'
 	}

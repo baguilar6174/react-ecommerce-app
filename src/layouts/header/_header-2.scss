@@ -1,0 +1,123 @@
+.header-2 {
+	background-color: #fff;
+}
+.header-2 .logo {
+	margin-top: 2.9rem;
+	margin-bottom: 2.9rem;
+}
+.header-2 .header-search-extended {
+	margin-right: 0;
+	max-width: none;
+}
+.header-2 .header-search-extended select,
+.header-2 .header-search-extended .form-control {
+	height: 38px;
+}
+.header-2 .header-search-extended .form-control {
+	padding: 1.2rem 2.4rem 1rem 2rem;
+	font-family: 'Poppins';
+	letter-spacing: -0.01em;
+}
+.header-2 .header-search-extended .btn {
+	height: 42px;
+	background-color: transparent;
+	color: #666;
+	max-width: 60px;
+}
+.header-2 .header-search-extended .btn:hover,
+.header-2 .header-search-extended .btn:focus,
+.header-2 .header-search-extended .btn:active {
+	color: #a6c76c;
+	background-color: transparent;
+}
+.header-2 .btn-primary:not(:disabled):not(.disabled):active,
+.header-2 .btn-primary:not(:disabled):not(.disabled).active,
+.header-2 .show > .btn-primary.dropdown-toggle {
+	color: #c96;
+	background-color: transparent;
+}
+.header-2 .header-search .search-wrapper-wide {
+	width: unset;
+}
+.header-2 .header-top {
+	font-weight: 300;
+	font-size: 1.4rem;
+	background-color: #f8f8f8;
+}
+.header-2 .header-top .header-left {
+	display: flex;
+	align-items: center;
+}
+.header-2 .header-top .container::after,
+.header-2 .header-top .container-fluid::after {
+	height: 0;
+}
+.header-2 .header-dropdown {
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+}
+.header-2 .header-dropdown + .header-dropdown {
+	margin-left: 4rem;
+}
+.header-2 .login-modal {
+	margin-left: 4rem;
+}
+.header-2 .top-menu {
+	text-transform: capitalize;
+}
+.header-2 .top-menu li + li {
+	margin-left: 4rem;
+}
+.header-2 .header-middle {
+	border-bottom: none;
+}
+.header-2 .header-middle .container::after {
+	position: absolute;
+	content: '';
+	bottom: -0.1rem;
+	left: 1rem;
+	right: 1rem;
+	height: 0.1rem;
+	background-color: #ebebeb;
+}
+.header-2 .cart-dropdown .dropdown-menu,
+.header-2 .compare-dropdown .dropdown-menu {
+	margin-top: 0;
+}
+.header-2 .cart-dropdown:not(:hover):not(.show) .dropdown-toggle,
+.header-2 .compare-dropdown:not(:hover):not(.show) .dropdown-toggle,
+.header-2 .mobile-menu-toggler,
+.header-2 .search-toggle:not(:hover):not(:focus),
+.header-2 .wishlist-link:not(:hover):not(:focus) {
+	color: #333;
+}
+.header-2 .sticky-header {
+	background-color: #fff;
+}
+.header-2 .mobile-menu-toggler {
+	margin-left: 0;
+}
+.header-2 .header-search .header-search-wrapper {
+	border-color: #dadada;
+}
+.header-2 .header-bottom {
+	color: #fff;
+}
+.header-2 .header-bottom .main-nav {
+	margin-left: 0;
+}
+.header-2 .header-bottom .menu ul,
+.header-2 .header-bottom .menu .megamenu {
+	margin-top: 0;
+}
+.header-2 .header-bottom .menu > li:not(:hover):not(.active):not(.show) > a {
+	color: #333;
+}
+.header-2 .header-bottom .mobile-menu-toggler {
+	color: #fff;
+}
+@media screen and (max-width: 991px) {
+	.header-2 .header-search-visible .header-search-wrapper:before {
+		border-bottom-color: #dadada;
+	}
+}
