@@ -86,7 +86,7 @@ export const Header: React.FC = (): JSX.Element => {
 							<a href="/" className="search-toggle" role="button">
 								<i className="icon-search"></i>
 							</a>
-							<form action="#" method="get">
+							<form>
 								<div className="header-search-wrapper search-wrapper-wide">
 									<label htmlFor="q" className="visually-hidden">
 										Search

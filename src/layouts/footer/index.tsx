@@ -1,4 +1,9 @@
+// styes
 import './_styles.scss';
+
+// components
+import { Button } from '@/components/shared/base';
+import { buttonType } from '@/components/shared/base/button';
 
 export const Footer: React.FC = (): JSX.Element => {
 	return (
@@ -82,10 +87,7 @@ export const Footer: React.FC = (): JSX.Element => {
 										required
 									/>
 									<div className="input-group-append">
-										<button className="btn btn-primary" type="submit" id="newsletter-btn">
-											<span>Subscribe</span>
-											<i className="icon-long-arrow-right"></i>
-										</button>
+										<Button text="Subscribe" icon="long-arrow-right" type={buttonType.submit} />
 									</div>
 								</div>
 							</form>

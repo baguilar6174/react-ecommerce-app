@@ -16,6 +16,11 @@ export enum iconPositionType {
 	end = 'end'
 }
 
+export enum buttonType {
+	button = 'button',
+	submit = 'submit'
+}
+
 // TODO: required props dynamically
 export type PropButton = {
 	text: string;
@@ -28,6 +33,8 @@ export type PropButton = {
 	icon?: string;
 	iconPosition?: iconPositionType;
 	shadow?: boolean;
+	type?: buttonType;
+	// TODO: add id, onClick
 };
 
 export const DEFAULT_PROPS: Partial<PropButton> = {
@@ -38,15 +45,17 @@ export const DEFAULT_PROPS: Partial<PropButton> = {
 	outlineType: borderStyleType.btnOutlinePrimary,
 	iconPosition: iconPositionType.end,
 	isLinkDark: false,
-	shadow: false
+	shadow: false,
+	type: buttonType.button
 };
 
 // TODO: implement HOC to create a link component use <Link />
 export const Button: React.FC<PropButton> = (props: PropButton): JSX.Element => {
-	const { roundedType, isRounded, isOutline, outlineType, text, icon, iconPosition, shadow, isLink, isLinkDark } =
+	const { roundedType, isRounded, isOutline, outlineType, text, icon, iconPosition, shadow, isLink, isLinkDark, type } =
 		props;
 	return (
 		<button
+			type={type}
 			className={`btn ${isLink ? `${isLinkDark ? 'btn-link btn-link-dark' : 'btn-link'}` : 'btn-primary'} ${
 				isRounded && roundedType
 			} ${isOutline && outlineType} ${shadow && 'btn-shadow'}`}
