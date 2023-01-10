@@ -329,60 +329,61 @@ export const ButtonsPage: React.FC = (): JSX.Element => {
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Rounded Corners Style</span>
-								<a href="/" className="btn btn-primary btn-rounded btn-shadow">
-									<span>Button text</span>
-									<i className="icon-long-arrow-right"></i>
-								</a>
+								<Button text="Button text" isRounded shadow icon="long-arrow-right" />
 							</div>
 						</div>
 
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Square Style</span>
-								<a href="/" className="btn btn-primary btn-shadow">
-									<span>Button text</span>
-									<i className="icon-long-arrow-right"></i>
-								</a>
+								<Button text="Button text" shadow icon="long-arrow-right" />
 							</div>
 						</div>
 
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Round Style</span>
-								<a href="/" className="btn btn-primary btn-round btn-shadow">
-									<span>Button text</span>
-									<i className="icon-long-arrow-right"></i>
-								</a>
+								<Button
+									text="Button text"
+									shadow
+									isRounded
+									roundedType={borderRoundedType.btnRound}
+									icon="long-arrow-right"
+								/>
 							</div>
 						</div>
 
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Rounded Corners Style</span>
-								<a href="/" className="btn btn-primary btn-rounded btn-shadow">
-									<i className="icon-long-arrow-right"></i>
-									<span>Button text</span>
-								</a>
+								<Button
+									text="Button text"
+									isRounded
+									shadow
+									icon="long-arrow-right"
+									iconPosition={iconPositionType.start}
+								/>
 							</div>
 						</div>
 
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Square Style</span>
-								<a href="/" className="btn btn-primary btn-shadow">
-									<i className="icon-long-arrow-right"></i>
-									<span>Button text</span>
-								</a>
+								<Button text="Button text" shadow icon="long-arrow-right" iconPosition={iconPositionType.start} />
 							</div>
 						</div>
 
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Round Style</span>
-								<a href="/" className="btn btn-primary btn-round btn-shadow">
-									<i className="icon-long-arrow-right"></i>
-									<span>Button text</span>
-								</a>
+								<Button
+									text="Button text"
+									shadow
+									isRounded
+									roundedType={borderRoundedType.btnRound}
+									icon="long-arrow-right"
+									iconPosition={iconPositionType.start}
+								/>
 							</div>
 						</div>
 					</div>
@@ -393,29 +394,18 @@ export const ButtonsPage: React.FC = (): JSX.Element => {
 
 					<div className="row">
 						<div className="col-12">
-							<a href="/" className="btn btn-link">
-								Button Text
-							</a>
-							<a href="/" className="btn btn-link">
-								<span>Button Text</span>
-								<i className="icon-long-arrow-right"></i>
-							</a>
-							<a href="/" className="btn btn-link">
-								<i className="icon-long-arrow-right"></i>
-								<span>Button Text</span>
-							</a>
-
-							<a href="/" className="btn btn-link btn-link-dark">
-								Button Text
-							</a>
-							<a href="/" className="btn btn-link btn-link-dark">
-								<span>Button Text</span>
-								<i className="icon-long-arrow-right"></i>
-							</a>
-							<a href="/" className="btn btn-link btn-link-dark">
-								<i className="icon-long-arrow-right"></i>
-								<span>Button Text</span>
-							</a>
+							<Button text="Button text" isLink />
+							<Button text="Button text" isLink icon="long-arrow-right" />
+							<Button text="Button text" isLink icon="long-arrow-right" iconPosition={iconPositionType.start} />
+							<Button text="Button text" isLink isLinkDark />
+							<Button text="Button text" isLink isLinkDark icon="long-arrow-right" />
+							<Button
+								text="Button text"
+								isLink
+								isLinkDark
+								icon="long-arrow-right"
+								iconPosition={iconPositionType.start}
+							/>
 						</div>
 					</div>
 
@@ -433,27 +423,21 @@ export const ButtonsPage: React.FC = (): JSX.Element => {
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Rounded Corners Style</span>
-								<a href="/" className="btn btn-primary btn-rounded">
-									Button text
-								</a>
+								<Button text="Button text" isRounded />
 							</div>
 						</div>
 
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Square Style</span>
-								<a href="/" className="btn btn-primary">
-									Button text
-								</a>
+								<Button text="Button text" />
 							</div>
 						</div>
 
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Round Style</span>
-								<a href="/" className="btn btn-primary btn-round">
-									Button text
-								</a>
+								<Button text="Button text" isRounded roundedType={borderRoundedType.btnRound} />
 							</div>
 						</div>
 					</div>
@@ -464,54 +448,48 @@ export const ButtonsPage: React.FC = (): JSX.Element => {
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Rounded Corners Style</span>
-								<a href="/" className="btn btn-outline-primary btn-rounded">
-									Button text
-								</a>
+								<Button text="Button text" isRounded isOutline />
 							</div>
 						</div>
 
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Square Style</span>
-								<a href="/" className="btn btn-outline-primary">
-									Button text
-								</a>
+								<Button text="Button text" isOutline />
 							</div>
 						</div>
 
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Round Style</span>
-								<a href="/" className="btn btn-outline-primary btn-round">
-									Button text
-								</a>
+								<Button text="Button text" isOutline isRounded roundedType={borderRoundedType.btnRound} />
 							</div>
 						</div>
 
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Rounded Corners Style</span>
-								<a href="/" className="btn btn-outline-dark btn-rounded">
-									Button text
-								</a>
+								<Button text="Button text" isRounded isOutline outlineType={borderStyleType.btnOutlineDark} />
 							</div>
 						</div>
 
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Square Style</span>
-								<a href="/" className="btn btn-outline-dark">
-									Button text
-								</a>
+								<Button text="Button text" isOutline outlineType={borderStyleType.btnOutlineDark} />
 							</div>
 						</div>
 
 						<div className="col-6 col-lg-4 col-xl-2">
 							<div className="btn-wrap">
 								<span>Round Style</span>
-								<a href="/" className="btn btn-outline-dark btn-round">
-									Button text
-								</a>
+								<Button
+									text="Button text"
+									isOutline
+									isRounded
+									outlineType={borderStyleType.btnOutlineDark}
+									roundedType={borderRoundedType.btnRound}
+								/>
 							</div>
 						</div>
 					</div>
@@ -520,29 +498,18 @@ export const ButtonsPage: React.FC = (): JSX.Element => {
 
 					<div className="row">
 						<div className="col-12">
-							<a href="/" className="btn btn-link">
-								Button Text
-							</a>
-							<a href="/" className="btn btn-link">
-								<span>Button Text</span>
-								<i className="icon-long-arrow-right"></i>
-							</a>
-							<a href="/" className="btn btn-link">
-								<i className="icon-long-arrow-right"></i>
-								<span>Button Text</span>
-							</a>
-
-							<a href="/" className="btn btn-link btn-link-dark">
-								Button Text
-							</a>
-							<a href="/" className="btn btn-link btn-link-dark">
-								<span>Button Text</span>
-								<i className="icon-long-arrow-right"></i>
-							</a>
-							<a href="/" className="btn btn-link btn-link-dark">
-								<i className="icon-long-arrow-right"></i>
-								<span>Button Text</span>
-							</a>
+							<Button text="Button text" isLink />
+							<Button text="Button text" isLink icon="long-arrow-right" />
+							<Button text="Button text" isLink icon="long-arrow-right" iconPosition={iconPositionType.start} />
+							<Button text="Button text" isLink isLinkDark />
+							<Button text="Button text" isLink isLinkDark icon="long-arrow-right" />
+							<Button
+								text="Button text"
+								isLink
+								isLinkDark
+								icon="long-arrow-right"
+								iconPosition={iconPositionType.start}
+							/>
 						</div>
 					</div>
 				</div>
