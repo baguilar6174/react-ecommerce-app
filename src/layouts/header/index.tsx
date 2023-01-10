@@ -7,6 +7,7 @@ import './_header-2.scss';
 
 // utils
 import { openMobileMenuFromBody, openMobileMenuSidebar } from '../utils';
+import { ItemCart } from './components/ItemCart';
 
 export const Header: React.FC = (): JSX.Element => {
 	return (
@@ -146,49 +147,21 @@ export const Header: React.FC = (): JSX.Element => {
 
 							<div className="dropdown-menu dropdown-menu-right mt-8">
 								<div className="dropdown-cart-products">
-									<div className="product">
-										<div className="product-cart-details">
-											<h4 className="product-title">
-												<a href="product.html">Beige knitted elastic runner shoes</a>
-											</h4>
-
-											<span className="cart-product-info">
-												<span className="cart-product-qty">1</span>x $84.00
-											</span>
-										</div>
-
-										<figure className="product-image-container">
-											<a href="product.html" className="product-image">
-												<img src="/images/products/cart/product-1.jpg" alt="product" />
-											</a>
-										</figure>
-										<a href="/" className="btn-remove" title="Remove Product">
-											<i className="icon-close"></i>
-										</a>
-									</div>
-
-									<div className="product">
-										<div className="product-cart-details">
-											<h4 className="product-title">
-												<a href="product.html">Blue utility pinafore denim dress</a>
-											</h4>
-
-											<span className="cart-product-info">
-												<span className="cart-product-qty">1</span>x $76.00
-											</span>
-										</div>
-
-										<figure className="product-image-container">
-											<a href="product.html" className="product-image">
-												<img src="/images/products/cart/product-2.jpg" alt="product" />
-											</a>
-										</figure>
-										<a href="/" className="btn-remove" title="Remove Product">
-											<i className="icon-close"></i>
-										</a>
-									</div>
+									<ItemCart
+										id="blue-dress"
+										title="Beige knitted elastic runner shoes"
+										image="/images/products/cart/product-1.jpg"
+										quantity={1}
+										price={85.0}
+									/>
+									<ItemCart
+										id="blue-dress"
+										title="Blue utility pinafore denim dress"
+										image="/images/products/cart/product-2.jpg"
+										quantity={1}
+										price={25.0}
+									/>
 								</div>
-
 								<div className="dropdown-cart-total">
 									<span>Total</span>
 
